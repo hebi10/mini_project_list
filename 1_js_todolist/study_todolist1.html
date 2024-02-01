@@ -1,0 +1,44 @@
+<!-- 240131 공부 작업물 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      todolist();
+    })
+
+    function todolist(){
+      let tg_input = document.querySelector(".inputWrap input");
+      let tg_value;
+      const tg_button = document.querySelector(".inputWrap button");
+      const tg_ul = document.querySelector(".wrap ul");
+
+      tg_input.addEventListener("change", function(){
+        tg_value = tg_input.value;
+        console.log(tg_value)
+        const handleList = () => {
+          if(tg_value !== ""){
+            tg_button.addEventListener("click", () => {
+              console.log(1);
+            })
+          }
+        }
+      })
+    }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <h1>할일 리스트</h1>
+    <div class="inputWrap">
+      <input type="text">
+      <button>추가하기</button>
+    </div>
+    <ul></ul>
+  </div>
+</body>
+</html>
